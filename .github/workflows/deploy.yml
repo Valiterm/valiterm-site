@@ -1,0 +1,39 @@
+name: Build & Deploy Valiterm Site
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main site
+        uses: actions/checkout@v4
+
+      - name: Checkout agent repository
+        uses: actions/checkout@v4
+        with:
+          repository: Valiterm/valiterm-agent
+          token: ${{ secrets.AGENT_TOKEN }}
+          path: agent-content
+
+      - name: Copy agent content into site
+        run: |
+          mkdir -p src/agent-content
+          cp -r agent-content/* src/agent-content/ || true
+
+      - name: Install Eleventy and build
+        run: |
+          npm install @11ty/eleventy
+          npx @11ty/eleventy
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CF_API_TOKEN }}
+          accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          projectName: valiterm
+          directory: _site
