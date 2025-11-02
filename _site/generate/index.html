@@ -1,0 +1,108 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <title>
+    Generate &amp; Submit · Valiterm.org
+    
+  </title>
+
+
+<meta name="description" content="Valiterm.org — Structured Data, Semantics &amp; AI-ready. Open definitions for AI and industrial metadata.">
+
+  
+  <meta property="og:title" content="Generate &amp; Submit">
+  <meta property="og:description" content="Valiterm.org — Structured Data, Semantics &amp; AI-ready.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://valiterm.org/generate/">
+  <meta property="og:site_name" content="Valiterm.org">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Generate &amp; Submit">
+  <meta name="twitter:description" content="Structured Data · Semantics · AI-ready.">
+
+  
+  <link rel="canonical" href="https://valiterm.org/generate/">
+  <meta name="valiterm:version" content="1.0.0">
+  <meta name="valiterm:build" content="2025-11-01">
+
+  
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+  
+  
+  <!-- === Favicon and Social Preview === -->
+<link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/img/favicon-192.png">
+
+<meta property="og:image" content="https://valiterm.org/assets/img/og-default.png">
+<meta property="og:image:alt" content="Valiterm.org — Structured Data, Semantics & AI-ready">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" id="site-nav"></nav>
+  </header>
+
+  <main class="container">
+    <h1>Generate a Valiterm definition</h1>
+<p>Use the prompt below with your preferred AI. Paste your product/page text where indicated, and follow the simulation loop.</p>
+
+<p><button class="btn" data-copy="#vt-prompt">Copy Prompt</button></p>
+<textarea id="vt-prompt" class="copybox" readonly>
+You are a rigorous terminology assistant creating a machine-readable Valiterm definition + JSON-LD.
+
+GOAL
+- Propose a canonical Valiterm DefinedTerm (or confirm one exists), with aliases/scope notes.
+- Produce a <script type="application/valiterm+json"> policy or definition block if relevant.
+- Output JSON-LD for a schema.org DefinedTerm referencing the canonical URI.
+- Simulate 5 representative customer Q&A using ONLY the script/definition (no outside knowledge).
+- Iterate until the merchant confirms answers are correct.
+
+INPUT
+[PASTE_SOURCE_TEXT_FROM_SITE]
+[OPTIONAL: SITE_URL / CATEGORY / BRAND CONTEXT]
+
+RULES
+- Prefer English, camelCase for term names (e.g., isAcceptableForConstruction).
+- If a schema.org term is reused in a non-standard way, clarify rules are NOT schema.org rules.
+- Add aliases (alternate labels) where common synonyms exist; keep a scope note if aliases differ subtly.
+- Be explicit about domain/scope (e.g., load-bearing construction, galvanizing constraints, etc.).
+- If multiple merchants independently coined near-identical terms, suggest one canonical + map others as aliases.
+- Provide provenance: “first-use” page URL if available.
+
+OUTPUT (in this order)
+1) Summary: proposed canonical name, 1–2 sentence human description, scope note, aliases.
+2) Valiterm script (if applicable): <script type="application/valiterm+json">…</script>
+3) JSON-LD (DefinedTerm): include @id, name, description, author, inDefinedTermSet, url.
+4) Simulation: 5 realistic Q→A pairs using ONLY the definition/script.
+5) Implementation notes: where to embed on page, how to link back to the canonical URI.
+6) Submission notes: how to submit JSON to Valiterm later (as a JSON file or PR).
+</textarea>
+
+<h2>What happens next?</h2>
+<ol>
+  <li>Run the prompt, review the first draft.</li>
+  <li>Ask the AI to <em>simulate questions</em> your customers would ask and verify the answers.</li>
+  <li>Iterate until you’re satisfied.</li>
+  <li>Embed the script/JSON-LD on your page (HowTo guide below).</li>
+</ol>
+
+<p>See also: <a href="/howto/publish-term/">How to publish your term</a></p>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Valiterm.org · v1.0.0</p>
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script defer src="/js/nav.js"></script>
+</body>
+</html>

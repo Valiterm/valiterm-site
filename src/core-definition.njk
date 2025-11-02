@@ -1,0 +1,32 @@
+---
+layout: layouts/legacy.njk
+title: Valiterm — Core Definition
+permalink: /core-definition/
+metaDescription: "Valiterm.org är en oberoende satsning som bygger öppna, AI-läsbara strukturer och regler för tekniska/industriella data."
+---
+
+<h2>Core Definition</h2>
+<p>“Core Definition” specifies how a Valiterm term is expressed as machine-readable data: identity, description, allowed placements, and multilingual reasoning aids.</p>
+
+<h3>Essentials</h3>
+<ul>
+  <li>Stable <code>@id</code> (URI) and <code>name</code></li>
+  <li><code>description</code> in English, with optional localized keys (e.g., <code>description-sv</code>)</li>
+  <li><code>allowedIn</code> lists consuming entities (e.g., <code>DefinedTerm</code>, <code>Product</code>, <code>HowTo</code>)</li>
+  <li>Reasoning hints (<code>reasoning</code>, <code>reasoning-sv</code>, …) to help AI interpret usage</li>
+</ul>
+
+<h3>Example (inline)</h3>
+<pre>
+&lt;section id="hasCoreUseCase" itemscope itemtype="https://valiterm.org/PropertyValue"&gt;
+  &lt;meta itemprop="description" content="Describes the primary or intended use case for a product or material." /&gt;
+  &lt;meta itemprop="valueType" content="text" /&gt;
+  &lt;meta itemprop="allowedIn" content="DefinedTerm" /&gt;
+  &lt;meta itemprop="allowedIn" content="Product" /&gt;
+  &lt;meta itemprop="allowedIn" content="HowTo" /&gt;
+  &lt;meta itemprop="reasoning" content="Helps AI understand domain-specific usage patterns for recommendation and classification." /&gt;
+  &lt;meta itemprop="status" content="accepted" /&gt;
+&lt;/section&gt;
+</pre>
+
+<p class="caption">See also: <a href="/defined-term/">DefinedTerm</a>, <a href="/property-value/">PropertyValue</a>.</p>

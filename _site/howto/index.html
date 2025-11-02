@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  
+  <title>
+    HowTo · Valiterm.org
+    
+  </title>
+
+<meta name="description" content="How to publish Valiterm data the recommended way (visible LD+JSON), plus an optional hidden channel with key+beacon for edge cases.">
+
+  
+  <meta property="og:title" content="HowTo">
+  <meta property="og:description" content="How to publish Valiterm data the recommended way (visible LD+JSON), plus an optional hidden channel with key+beacon for edge cases.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://valiterm.org/howto/">
+  <meta property="og:site_name" content="Valiterm.org">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="HowTo">
+  <meta name="twitter:description" content="How to publish Valiterm data the recommended way (visible LD+JSON), plus an optional hidden channel with key+beacon for edge cases.">
+
+  
+  <link rel="canonical" href="https://valiterm.org/howto/">
+  <meta name="valiterm:version" content="1.0.0">
+  <meta name="valiterm:build" content="2025-11-01">
+
+  <link rel="stylesheet" href="/assets/css/legacy.css">
+
+  
+  
+  <!-- === Favicon and Social Preview === -->
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/img/favicon-192.png">
+
+  <meta property="og:image" content="https://valiterm.org/assets/img/og-default.png">
+  <meta property="og:image:alt" content="Valiterm.org — Structured Data, Semantics & AI-ready">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+</head>
+<body>
+  <header>
+    <div class="banner">Under Development (Alpha)</div>
+    <h1>Valiterm.org</h1>
+    <p>Structured Data • Semantics • AI-ready</p>
+
+    <!-- Kompakt, grupperad meny (fylls av /data/pages.json via /js/nav.js) -->
+    <nav id="site-nav" class="legacy-nav"></nav>
+    
+  </header>
+
+  <main>
+    
+<h1>HowTo: Publish Valiterm data</h1>
+<p>This guide shows the recommended <strong>visible</strong> approach first. An optional <em>Hidden Valiterm</em> channel is provided as an <strong>advanced</strong> solution for special cases.</p>
+
+<h2 id="visible">1) Visible LD+JSON (recommended)</h2>
+<p>Put standard <code>application/ld+json</code> on your page. Copy, adapt, paste.</p>
+
+<pre><code>&lt;script type="application/ld+json"&gt;{
+  "@context": "https://schema.org",
+  "@type": ["Organization","LocalBusiness"],
+  "@id": "https://example.com/#org",
+  "name": "Company Name",
+  "url": "https://example.com",
+  "telephone": "+46-00-000000",
+  "email": "info@example.com",
+  "publicAccess": true,
+  "address": {
+    "@type":"PostalAddress",
+    "streetAddress":"Street 1",
+    "postalCode":"123 45",
+    "addressLocality":"City",
+    "addressCountry":"SE"
+  },
+  "openingHoursSpecification": [{
+    "@type":"OpeningHoursSpecification",
+    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens":"07:00",
+    "closes":"16:00"
+  }],
+  "areaServed": ["SE"],
+  "serviceArea": ["SE-GBG"]
+}&lt;/script&gt;</code></pre>
+
+<p><strong>Why visible?</strong> Best crawlability, standard tools (Google Rich Results, validators) understand it, and it’s transparent for auditors and users.</p>
+
+<details>
+  <summary><strong>Advanced:</strong> Hidden Valiterm (requires <em>key</em> + <em>beacon</em>)</summary>
+
+  <p><em>Use only if visible JSON is blocked by a CMS, injected ads, or third-party policies.</em> Hidden Valiterm keeps content out of the render tree but still machine-readable for agents that support the channel.</p>
+
+  <h3>How it works</h3>
+  <ol>
+    <li>You publish a <strong>beacon</strong> and a published <strong>key</strong> in &lt;head&gt;.</li>
+    <li>Your Valiterm JSON is embedded in an HTML comment with a known prefix. Supporting agents verify the key via the beacon and parse the payload.</li>
+  </ol>
+
+  <h4>Head markers (required)</h4>
+  <pre><code>&lt;meta name="valiterm:beacon" content="YOUR_BEACON_ID"&gt;
+&lt;meta name="valiterm:key" content="YOUR_PUBLIC_KEY"&gt;</code></pre>
+
+  <h4>Hidden payload (on the page)</h4>
+  <pre><code>&lt;!-- ai:valiterm format=application/valiterm+json
+{
+  "@context": "https://valiterm.org",
+  "@type": "BusinessProfile",
+  "@id": "https://example.com/#valiterm",
+  "policy": { "visibility": "hidden", "beacon": "YOUR_BEACON_ID", "keyRef": "YOUR_PUBLIC_KEY" },
+  "openingHours": [{ "dayOfWeek":["Mon","Tue","Wed","Thu","Fri"], "opens":"07:00", "closes":"16:00" }],
+  "serviceArea": ["SE-GBG"],
+  "areaServed": ["SE"]
+}
+--&gt;</code></pre>
+
+  <h4>Why/when?</h4>
+  <ul>
+    <li>When visible scripts are stripped or break layout.</li>
+    <li>To keep the DOM lean while remaining AI-readable.</li>
+    <li>To avoid non-technical gatekeepers that block structured data channels not required by law or policy in your region.</li>
+  </ul>
+
+  <h4>Important</h4>
+  <ul>
+    <li>Use unique keys per site; rotate regularly.</li>
+    <li>Supporting agents are expected to verify the beacon/key before trust.</li>
+    <li>Don’t use hidden channels to misrepresent content; legal and platform policies still apply.</li>
+  </ul>
+</details>
+
+  </main>
+
+  <footer>
+    © 2025 Valiterm.org – All Rights Reserved.
+  </footer>
+
+  <!-- Samma nav.js som base-layouten använder -->
+  <script defer src="/js/nav.js"></script>
+</body>
+</html>

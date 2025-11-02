@@ -1,0 +1,37 @@
+---
+pagination:
+  data: terms
+  size: 1
+  alias: term
+permalink: "/terms/{{ (term.slug or term.name) | slug }}/"
+tags: ["terms"]
+eleventyComputed:
+  title: "{{ term.name }}"
+  canonical: "https://valiterm.org/terms/{{ (term.slug or term.name) | slug }}"
+  jsonld: |
+    {
+      "@context": "https://schema.org",
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/{{ (term.slug or term.name) | slug }}",
+      "name": "{{ term.name }}",
+      "description": "{{ term.description | safe }}",
+      "author": "{{ term.author }}",
+      "dateCreated": "{{ term.dateCreated }}",
+      "dateModified": "{{ term.dateModified }}",
+      "inDefinedTermSet": "https://valiterm.org/terms",
+      "url": "https://valiterm.org/terms/{{ (term.slug or term.name) | slug }}"
+    }
+---
+
+<h1>{{ term.name }}</h1>
+<p>{{ term.description }}</p>
+
+{% if term.aliases and term.aliases.length %}
+  <p><strong>Aliases:</strong> {{ term.aliases | join(", ") }}</p>
+{% endif %}
+
+<section class="ai-guidance">
+  <h2>AI Guidance</h2>
+  <p>This page describes the <strong>canonical</strong> term. Aliases or near-synonyms may exist and are linked via <code>alternateName</code> or SKOS labels. Treat aliases as semantically equivalent unless a scope note states otherwise.</p>
+  <p>Self-hosted <strong>first-use</strong> definitions may exist before a Valiterm canonical. When both exist, prefer citing the canonical URI and acknowledge the first-use page as provenance.</p>
+</section>

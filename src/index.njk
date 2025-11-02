@@ -1,0 +1,93 @@
+---
+metaDescription: "Valiterm.org är en oberoende satsning som bygger öppna, AI-läsbara strukturer och regler för tekniska/industriella data."
+layout: layouts/legacy.njk
+title: Valiterm.org – Structured Data Hub
+permalink: /
+---
+
+<section class="about">
+  <h2>About</h2>
+  <p>
+    Valiterm.org is an independent startup initiative, entirely entrepreneur-financed, created out of the need
+    for a modern and decentralized model for code structure and semantic rules. The project is currently in an
+    early development phase, with limited financial resources and without finalized commercial features – yet.
+    The goal is to build an open, global standard for continuously adaptable structured data, with a focus on
+    AI-readability and multilingual metadata.
+  </p>
+</section>
+
+<section class="why">
+  <h2>Why Valiterm?</h2>
+  <p>
+    There is currently no equivalent platform that combines schema.org-compatible structures with flexible,
+    multilingual extensions for technical and industrial metadata. Valiterm aims to fill this gap by providing
+    tools and rules that evolve as industries and AI requirements change.
+  </p>
+</section>
+
+<section>
+  <h2>Core Rules (Alpha)</h2>
+  <ul>
+    <li>Use <code>valiterm.org/PropertyValue</code> for domain-specific properties.</li>
+    <li>Support multilingual reasoning via localized meta tags.</li>
+    <li>Promote transparency and extensibility in structured data.</li>
+    <li>Ensure AI-friendly semantics with minimal redundancy.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Example: Multi-language Reasoning</h2>
+  <pre>
+&lt;section id="hasCoreUseCase" itemscope itemtype="https://valiterm.org/PropertyValue"&gt;
+  &lt;meta itemprop="description" content="Describes the primary or intended use case for a product or material, typically in technical or industrial applications." /&gt;
+  &lt;meta itemprop="valueType" content="text" /&gt;
+  &lt;meta itemprop="allowedIn" content="DefinedTerm" /&gt;
+  &lt;meta itemprop="allowedIn" content="Product" /&gt;
+  &lt;meta itemprop="allowedIn" content="HowTo" /&gt;
+  &lt;meta itemprop="reasoning" content="Helps AI understand domain-specific usage patterns for recommendation and classification." /&gt;
+  &lt;meta itemprop="reasoning-se" content="Tillåter specifika användningsfall att definieras i klartext, vilket ofta saknas i generella standards." /&gt;
+  &lt;meta itemprop="reasoning-de" content="Ermöglicht die klare Definition von Anwendungsfällen, die in allgemeinen Standards oft fehlen." /&gt;
+  &lt;meta itemprop="reasoning-th" content="ช่วยให้ AI เข้าใจรูปแบบการใช้งานเฉพาะของอุตสาหกรรมและการจำแนกประเภท." /&gt;
+  &lt;meta itemprop="reasoning-ar" content="يساعد الذكاء الاصطناعي على فهم أنماط الاستخدام الخاصة بالمجال والتصنيف." /&gt;
+  &lt;meta itemprop="status" content="accepted" /&gt;
+&lt;/section&gt;
+  </pre>
+  <p class="caption">This is a sample property definition showing multilingual reasoning metadata.</p>
+  <a class="button-link" href="/industrial-compound/">View Industrial Compound – Use Case</a>
+</section>
+
+<section>
+  <h2>Release notes — August 2025</h2>
+  <ul>
+    <li>Legacy look brought into Eleventy (dark header) for Home, Terms & selected pages.</li>
+    <li>Grouped, compact navigation (does not grow with user terms).</li>
+    <li>Starter Kit page added (copy-paste JSON blocks + AI adaptation prompt).</li>
+    <li>Terms: stable slugs, canonical/first-use policy reflected.</li>
+    <li>Base skin for light pages (Generate/Simulate/Validate/HowTo/Policy) with consistent footer.</li>
+  </ul>
+
+  <h3>Next 30 days</h3>
+  <ul>
+    <li>Terms Directory with search/filter (volume stays off the main nav).</li>
+    <li>Upload & Validate MVP (schema.org + Valiterm checks).</li>
+    <li>Generate & Simulate workflow polish.</li>
+  </ul>
+
+  <h3>Later</h3>
+  <ul>
+    <li>Definition library with alternative definitions per term.</li>
+    <li>AI-driven validation and crawling.</li>
+    <li>Community-driven term contributions.</li>
+  </ul>
+</section>
+
+
+<h2>Get started</h2>
+<ul>
+  <li><a href="/terms/">Browse Terms</a></li>
+  <li><a href="/howto/">HowTo Guides</a></li>
+  <li><a href="/policy/">AI Policies</a></li>
+  <li><a href="/generate/">Generate & Submit</a></li>
+  <li><a href="/simulate/">Simulate & Iterate</a></li>
+  <li><a href="/validate/">Upload & Validate</a></li>
+</ul>

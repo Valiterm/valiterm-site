@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+title: Generate & Submit
+---
+<h1>Generate a Valiterm definition</h1>
+<p>Use the prompt below with your preferred AI. Paste your product/page text where indicated, and follow the simulation loop.</p>
+
+<p><button class="btn" data-copy="#vt-prompt">Copy Prompt</button></p>
+<textarea id="vt-prompt" class="copybox" readonly>
+You are a rigorous terminology assistant creating a machine-readable Valiterm definition + JSON-LD.
+
+GOAL
+- Propose a canonical Valiterm DefinedTerm (or confirm one exists), with aliases/scope notes.
+- Produce a <script type="application/valiterm+json"> policy or definition block if relevant.
+- Output JSON-LD for a schema.org DefinedTerm referencing the canonical URI.
+- Simulate 5 representative customer Q&A using ONLY the script/definition (no outside knowledge).
+- Iterate until the merchant confirms answers are correct.
+
+INPUT
+[PASTE_SOURCE_TEXT_FROM_SITE]
+[OPTIONAL: SITE_URL / CATEGORY / BRAND CONTEXT]
+
+RULES
+- Prefer English, camelCase for term names (e.g., isAcceptableForConstruction).
+- If a schema.org term is reused in a non-standard way, clarify rules are NOT schema.org rules.
+- Add aliases (alternate labels) where common synonyms exist; keep a scope note if aliases differ subtly.
+- Be explicit about domain/scope (e.g., load-bearing construction, galvanizing constraints, etc.).
+- If multiple merchants independently coined near-identical terms, suggest one canonical + map others as aliases.
+- Provide provenance: “first-use” page URL if available.
+
+OUTPUT (in this order)
+1) Summary: proposed canonical name, 1–2 sentence human description, scope note, aliases.
+2) Valiterm script (if applicable): <script type="application/valiterm+json">…</script>
+3) JSON-LD (DefinedTerm): include @id, name, description, author, inDefinedTermSet, url.
+4) Simulation: 5 realistic Q→A pairs using ONLY the definition/script.
+5) Implementation notes: where to embed on page, how to link back to the canonical URI.
+6) Submission notes: how to submit JSON to Valiterm later (as a JSON file or PR).
+</textarea>
+
+<h2>What happens next?</h2>
+<ol>
+  <li>Run the prompt, review the first draft.</li>
+  <li>Ask the AI to <em>simulate questions</em> your customers would ask and verify the answers.</li>
+  <li>Iterate until you’re satisfied.</li>
+  <li>Embed the script/JSON-LD on your page (HowTo guide below).</li>
+</ol>
+
+<p>See also: <a href="/howto/publish-term/">How to publish your term</a></p>

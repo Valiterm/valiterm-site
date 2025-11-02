@@ -1,0 +1,8 @@
+{
+  "timestamp": "2025-11-01T14:40:56.171Z",
+  "mode": "publish",
+  "processedReport": "report-2025-11-01T13:39:29.081Z.json",
+  "createdFiles": [
+    "src/terms/test-term.njk"
+  ]
+}

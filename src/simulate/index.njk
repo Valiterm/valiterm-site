@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+title: Simulate & Iterate
+---
+<h1>Simulate & Iterate</h1>
+<p>After generating a draft, ask the AI to simulate customer questions and answer <em>using only</em> your definition/policy. Tweak until the answers are correct and safe.</p>
+
+<h2>Mini-prompt for simulation</h2>
+<p><button class="btn" data-copy="#sim-prompt">Copy</button></p>
+<textarea id="sim-prompt" class="copybox" readonly>
+Given the Valiterm definition/policy above, simulate 5 realistic customer questions. Answer each strictly using only the provided definition/script. For any ambiguity, propose a concise revision to the definition to fix it, then re-run the 5 Q&A with the revised text.
+</textarea>
+
+<p>Next: <a href="/validate/">Validate</a> or <a href="/howto/publish-term/">Publish</a></p>

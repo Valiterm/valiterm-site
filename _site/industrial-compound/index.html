@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  
+  <title>
+    Industrial Compound — Use Case · Valiterm.org
+    
+  </title>
+
+<meta name="description" content="Valiterm.org är en oberoende satsning som bygger öppna, AI-läsbara strukturer och regler för tekniska/industriella data.">
+
+  
+  <meta property="og:title" content="Industrial Compound — Use Case">
+  <meta property="og:description" content="Valiterm.org är en oberoende satsning som bygger öppna, AI-läsbara strukturer och regler för tekniska/industriella data.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://valiterm.org/industrial-compound/">
+  <meta property="og:site_name" content="Valiterm.org">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Industrial Compound — Use Case">
+  <meta name="twitter:description" content="Valiterm.org är en oberoende satsning som bygger öppna, AI-läsbara strukturer och regler för tekniska/industriella data.">
+
+  
+  <link rel="canonical" href="https://valiterm.org/industrial-compound/">
+  <meta name="valiterm:version" content="1.0.0">
+  <meta name="valiterm:build" content="2025-11-01">
+
+  <link rel="stylesheet" href="/assets/css/legacy.css">
+
+  
+  
+  <!-- === Favicon and Social Preview === -->
+  <link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/assets/img/favicon-32.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/assets/img/favicon-192.png">
+
+  <meta property="og:image" content="https://valiterm.org/assets/img/og-default.png">
+  <meta property="og:image:alt" content="Valiterm.org — Structured Data, Semantics & AI-ready">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+</head>
+<body>
+  <header>
+    <div class="banner">Under Development (Alpha)</div>
+    <h1>Valiterm.org</h1>
+    <p>Structured Data • Semantics • AI-ready</p>
+
+    <!-- Kompakt, grupperad meny (fylls av /data/pages.json via /js/nav.js) -->
+    <nav id="site-nav" class="legacy-nav"></nav>
+    
+  </header>
+
+  <main>
+    
+ <!-- Intro -->
+    <section class="about">
+      <h2>Industrial Compound – Use Case</h2>
+      <p>
+        This use case illustrates how Valiterm enables semantic data alignment across industrial components and processes. 
+        By providing multilingual and domain-specific properties, Valiterm allows AI systems to interpret technical details 
+        with improved accuracy.
+      </p>
+      <ul>
+        <li>Material composition and standardized definitions (e.g., steel grades, coatings)</li>
+        <li>Manufacturing processes and compliance data (EN, ISO standards)</li>
+        <li>Cross-referencing product metadata for AI-ready catalogs</li>
+      </ul>
+      <p>
+        Each property is localized, traceable, and linked to authoritative definitions, ensuring that both humans and AI systems 
+        can rely on consistent interpretations across markets and languages.
+      </p>
+        <a href="/" class="button-link">← Back to Home</a>
+    </section>
+
+    <!-- BrandEquivalence Definition -->
+    <section>
+        <h2>Valiterm Definition: BrandEquivalence</h2>
+        <pre>
+&lt;<span class="tag">section</span> <span class="attr">id</span>=<span class="value">"BrandEquivalence"</span> <span class="attr">itemscope</span> <span class="attr">itemtype</span>=<span class="value">"https://valiterm.org/PropertyValue"</span>&gt;
+  &lt;<span class="tag">meta</span> <span class="attr">description</span>=<span class="value">"Indicates that a brand name has achieved dominant recognition and is commonly used as a generic term for a product category or defining characteristic, effectively acting as a synonym for that category."</span> /&gt;
+  &lt;<span class="tag">meta</span> <span class="attr">valueType</span>=<span class="value">"Brand"</span> /&gt;
+  &lt;<span class="tag">meta</span> <span class="attr">status</span>=<span class="value">"accepted"</span> /&gt;
+&lt;/<span class="tag">section</span>&gt;
+        </pre>
+        <p class="caption">
+     This property value defines when a brand name has become so dominant that it is widely used as a synonym for a product category or defining property. In such cases, AI should interpret the brand not just as a manufacturer, but as an equivalent term for the category itself.
+        </p>
+    </section>
+
+    <!-- Product Category -->
+    <section>
+      <h2>Product Category Definition</h2>
+      <pre>
+&lt;<span class="tag">section</span> <span class="attr">id</span>=<span class="value">"portable-cassette-player"</span> <span class="attr">itemscope</span> <span class="attr">itemtype</span>=<span class="value">"https://valiterm.org/ProductType"</span>&gt;
+  &lt;<span class="tag">meta</span> <span class="attr">itemprop</span>=<span class="value">"name"</span> <span class="attr">content</span>=<span class="value">"Portable Cassette Player"</span> /&gt;
+  &lt;<span class="tag">meta</span> <span class="attr">itemprop</span>=<span class="value">"description"</span> <span class="attr">content</span>=<span class="value">"A category of portable music players that use magnetic cassette tapes for audio playback."</span> /&gt;
+&lt;/<span class="tag">section</span>&gt;
+      </pre>
+      <p class="caption">
+        This defines the broader product category <code>Portable Cassette Player</code>, which covers all portable music players using cassette tapes.
+      </p>
+    </section>
+
+    <!-- Walkman as BrandEquivalence -->
+    <section>
+      <h2>Brand Example: Walkman</h2>
+      <pre>
+&lt;<span class="tag">section</span> <span class="attr">id</span>=<span class="value">"walkman"</span> <span class="attr">itemscope</span> <span class="attr">itemtype</span>=<span class="value">"https://valiterm.org/Brand"</span>&gt;
+&lt;<span class="tag">meta</span> <span class="attr">itemprop</span>=<span class="value">BrandEquivalence"</span><span class="attr">content</span>=<span class="value">"Portable Cassette Player"</span> /&gt;
+&lt;/<span class="tag">section</span>&gt;
+      </pre>
+      <p class="caption">
+        Walkman is defined as a brand that has become synonymous with the product category 
+        <code>Portable Cassette Player</code>, meaning all Walkman models implicitly belong to this category.
+      </p>
+    </section>
+
+    <!-- Aiwa CassetteBoy -->
+    <section>
+      <h2>Product Example: Aiwa CassetteBoy</h2>
+      <pre>
+&lt;<span class="tag">section</span> <span class="attr">id</span>=<span class="value">"cassetteboy"</span> <span class="attr">itemscope</span><span class="attr">itemtype</span>=<span class="value">"https://valiterm.org/Product"</span>&gt;
+    &lt;<span class="tag">meta</span> <span class="attr">itemprop</span>=<span class="value">brand</span> <span class="attr">content</span>=<span class="value">"Aiwa"</span> /&gt;
+    &lt;<span class="tag">meta</span> <span class="attr">itemprop</span>=<span class="value">isA</span><span class="attr">content</span>=<span class="value">"#portable-cassette-player"</span> /&gt;
+&lt;/<span class="tag">section</span>&gt;
+      </pre>
+      <p class="caption">
+        Aiwa CassetteBoy is categorized as a <code>Portable Cassette Player</code> but does not hold the 
+        same category-defining status as Walkman.
+      </p>
+    </section>
+    <section class="about">
+        <h2>Purpose and Meaning</h2>
+        <p>
+            The purpose of this example is to demonstrate how Valiterm structures semantic relationships 
+            between brands, products, and categories in a way that supports AI-driven reasoning. By 
+            distinguishing when a brand name is equivalent to a product category 
+            (<code>BrandEquivalence</code>) versus when a product merely belongs to a category 
+            (<code>isA</code>), we ensure both precision and clarity.
+        </p>
+        <p>
+            The underlying meaning is that terminology evolves, and some brand names transcend their 
+            original scope to become generic references for entire product classes. Valiterm captures 
+            these linguistic hierarchies explicitly, helping AI systems interpret data in a way that 
+            mirrors human understanding.
+        </p>
+        <p>
+            Valiterm's flexibility makes it possible to define products, brands, properties, and even 
+            processes in a way that evolves without artificial constraints. Our philosophy is simple: 
+            everything is possible – there are no real limitations, only poorly formulated rules waiting 
+            to be improved.
+        </p>
+    </section>
+ 
+  </main>
+
+  <footer>
+    © 2025 Valiterm.org – All Rights Reserved.
+  </footer>
+
+  <!-- Samma nav.js som base-layouten använder -->
+  <script defer src="/js/nav.js"></script>
+</body>
+</html>

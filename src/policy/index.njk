@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+title: Policies
+permalink: /policy/
+---
+
+<h1>AI Policies · Valiterm</h1>
+<p>These policies guide how terms, definitions, and operational blocks are authored and consumed by AI systems.</p>
+
+<h2 id="canonical-firstuse">Canonical vs first-use</h2>
+<ul>
+  <li><strong>Canonical</strong> pages are authoritative, stable URIs hosted on valiterm.org or a recognized mirror.</li>
+  <li><strong>First-use</strong> pages (self-hosted) may precede a canonical; when a canonical exists, cite it and keep first-use as provenance.</li>
+</ul>
+
+<h2 id="identity-versioning">Identity & versioning</h2>
+<ul>
+  <li><code>@id</code> must be stable. Don’t recycle URIs.</li>
+  <li>Use semantic status flags (e.g. <code>"status":"draft|accepted|deprecated"</code>) instead of changing IDs.</li>
+  <li>Include <code>dateCreated</code> and <code>dateModified</code> where applicable.</li>
+</ul>
+
+<h2 id="multilingual">Multilingual metadata</h2>
+<ul>
+  <li>Keep English as baseline.</li>
+  <li>Localized message keys are allowed (<code>messages.sv</code>, <code>name-sv</code>), kept in the same object as the English source.</li>
+</ul>
+
+<h2 id="publishing">Publishing practice</h2>
+<ul>
+  <li>Prefer path-only links on your own domain during testing (<code>/terms/</code>), switch to absolute when stable.</li>
+  <li>Hidden blocks are acceptable (HTML comments) for valiterm JSON; schema.org JSON-LD should be published in <code>&lt;script type="application/ld+json"&gt;</code>.</li>
+  <li>IDs must not depend on build hashes or session tokens.</li>
+</ul>
+
+<h2 id="ownership-privacy">Ownership & privacy</h2>
+<ul>
+  <li>You own the definitions and data you publish on your domain.</li>
+  <li>Do not include personal data; operational blocks should be policy-level, not PII.</li>
+</ul>
+
+<h2 id="interop">Interoperability</h2>
+<ul>
+  <li>Terms should be usable from generic schema.org entities (e.g., <code>PropertyValue</code> on Product/DefinedTerm).</li>
+  <li>Prefer additive rules that don’t break consumers if a block is missing.</li>
+</ul>

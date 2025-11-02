@@ -1,0 +1,68 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {# === Dynamisk titel och beskrivning === #}
+  <title>
+    {% if title %}{{ title }} · {{ site.siteName or 'Valiterm.org' }}
+    {% else %}Valiterm.org – Structured Data · Semantics · AI-ready{% endif %}
+  </title>
+
+
+<meta name="description" content="{{ metaDescription or site.defaultDescription }}">
+
+  {# === Open Graph / Twitter === #}
+  <meta property="og:title" content="{{ title or site.siteName or 'Valiterm.org' }}">
+  <meta property="og:description" content="{{ metaDescription or 'Valiterm.org — Structured Data, Semantics & AI-ready.' }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.siteName or 'Valiterm.org' }}">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ title or 'Valiterm.org' }}">
+  <meta name="twitter:description" content="{{ metaDescription or 'Structured Data · Semantics · AI-ready.' }}">
+
+  {# === Canonical + version info === #}
+  <link rel="canonical" href="{{ canonical or (site.url + page.url) }}">
+  <meta name="valiterm:version" content="{{ site.version }}">
+  <meta name="valiterm:build" content="{{ site.buildDate }}">
+
+  {# === Stylesheet === #}
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+  {# === Valiterm-specifikt JSON-block === #}
+  {% if jsonld %}
+  <script type="application/valiterm+json">
+  {{ jsonld | safe }}
+  </script>
+  {% endif %}
+  <!-- === Favicon and Social Preview === -->
+<link rel="icon" href="/assets/img/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/assets/img/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/assets/img/favicon-192.png">
+
+<meta property="og:image" content="https://valiterm.org/assets/img/og-default.png">
+<meta property="og:image:alt" content="Valiterm.org — Structured Data, Semantics & AI-ready">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" id="site-nav"></nav>
+  </header>
+
+  <main class="container">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; {{ site.buildDate | year }} {{ site.siteName or 'Valiterm.org' }} · v{{ site.version }}</p>
+  </footer>
+
+  <script src="/js/app.js"></script>
+  <script defer src="/js/nav.js"></script>
+</body>
+</html>

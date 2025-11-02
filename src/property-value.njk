@@ -1,0 +1,23 @@
+---
+layout: layouts/legacy.njk
+title: PropertyValue
+permalink: /property-value/
+
+metaDescription: "Valiterm.org är en oberoende satsning som bygger öppna, AI-läsbara strukturer och regler för tekniska/industriella data."
+---
+
+<h2>PropertyValue</h2>
+<p><code>schema.org/PropertyValue</code> (and Valiterm’s extended use) lets you attach typed, reasoned properties to terms, products, or guides.</p>
+
+<h3>Minimal inline (Valiterm style)</h3>
+<pre>
+&lt;section id="hasCoreUseCase" itemscope itemtype="https://valiterm.org/PropertyValue"&gt;
+  &lt;meta itemprop="description" content="Describes the primary or intended use case." /&gt;
+  &lt;meta itemprop="valueType" content="text" /&gt;
+  &lt;meta itemprop="allowedIn" content="DefinedTerm" /&gt;
+  &lt;meta itemprop="allowedIn" content="Product" /&gt;
+  &lt;meta itemprop="status" content="accepted" /&gt;
+&lt;/section&gt;
+</pre>
+
+<p class="caption">See also: <a href="/defined-term/">DefinedTerm</a>, <a href="/core-definition/">Core Definition</a>.</p>

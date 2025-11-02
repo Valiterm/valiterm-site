@@ -1,0 +1,22 @@
+---
+layout: layouts/legacy.njk
+title: DefinedTerm
+permalink: /defined-term/
+metaDescription: "Valiterm.org är en oberoende satsning som bygger öppna, AI-läsbara strukturer och regler för tekniska/industriella data."
+---
+
+<h2>DefinedTerm</h2>
+<p><code>schema.org/DefinedTerm</code> is the base container for domain terms. Use it to host a human-readable definition plus machine-readable helpers (e.g. Valiterm <code>PropertyValue</code> blocks).</p>
+
+<h3>Minimal JSON-LD</h3>
+<pre>
+&lt;script type="application/ld+json"&gt;{
+  "@context":"https://schema.org",
+  "@type":"DefinedTerm",
+  "@id":"https://example.com/terms/has-core-use-case",
+  "name":"hasCoreUseCase",
+  "description":"Describes the primary or intended use case."
+}&lt;/script&gt;
+</pre>
+
+<p class="caption">See also: <a href="/core-definition/">Core Definition</a>, <a href="/property-value/">PropertyValue</a>.</p>

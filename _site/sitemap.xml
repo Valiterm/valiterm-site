@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url><loc>https://www.valiterm.org/</loc></url>
+  <url><loc>https://www.valiterm.org/starter-kit.html</loc></url>
+  <url><loc>https://www.valiterm.org/core-definition/</loc></url>
+  <url><loc>https://www.valiterm.org/defined-term/</loc></url>
+  <url><loc>https://www.valiterm.org/property-value/</loc></url>
+  <url><loc>https://www.valiterm.org/industrial-compound/</loc></url>
+  <url><loc>https://www.valiterm.org/terms/</loc></url>
+  
+  <url><loc>https://www.valiterm.org/terms/is-acceptable-for-construction/</loc></url>
+  
+</urlset>

@@ -1,0 +1,8 @@
+{
+  "timestamp": "2025-11-01T14:39:31.729Z",
+  "mode": "dry-run",
+  "processedReport": "report-2025-11-01T13:39:29.081Z.json",
+  "createdFiles": [
+    "src/terms/test-term.njk"
+  ]
+}

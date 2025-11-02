@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "is-acceptable-for-construction",
+    "name": "isAcceptableForConstruction",
+    "description": "Indicates whether a material or product is acceptable for load-bearing construction under applicable norms.",
+    "author": "Valiterm Core",
+    "dateCreated": "2025-08-17",
+    "dateModified": "2025-08-17",
+    "aliases": ["acceptableForLoadBearing", "constructionAcceptable"]
+  },
+  {
+    "slug": "is-galvanizable",
+    "name": "isGalvanizable",
+    "description": "Indicates whether an item is suitable for hot-dip galvanizing given material and surface constraints.",
+    "author": "Valiterm Core",
+    "dateCreated": "2025-08-17",
+    "dateModified": "2025-08-17",
+    "aliases": []
+  },
+  {
+    "slug": "has-core-use-case",
+    "name": "hasCoreUseCase",
+    "description": "States the principal intended use context of the item (the core use case).",
+    "author": "Valiterm Core",
+    "dateCreated": "2025-08-17",
+    "dateModified": "2025-08-17",
+    "aliases": []
+  },
+  {
+    "slug": "alternativ-definition",
+    "name": "AlternativDefinition",
+    "description": "A structured alternative definition that critiques an existing definition and proposes a corrected one with supporting references.",
+    "author": "Valiterm Core",
+    "dateCreated": "2025-08-17",
+    "dateModified": "2025-08-17",
+    "aliases": []
+  },
+  {
+    "slug": "property-value",
+    "name": "PropertyValue (Valiterm)",
+    "description": "A PropertyValue variant that references Valiterm terms to provide explicit, machine-interpretable semantics.",
+    "author": "Valiterm Core",
+    "dateCreated": "2025-08-17",
+    "dateModified": "2025-08-17",
+    "aliases": []
+  },
+  {
+    "slug": "description-as-standard",
+    "name": "description-as-standard",
+    "description": "Use of description to carry human-readable standard/source notes when valueReference is impractical, to aid AI comprehension.",
+    "author": "Valiterm Core",
+    "dateCreated": "2025-08-17",
+    "dateModified": "2025-08-17",
+    "aliases": []
+  },
+  {
+    "slug": "additional-property-extended",
+    "name": "additionalProperty (extended)",
+    "description": "Extended mapping of technical table fields to explicit properties linked to domain terms for improved machine interpretation.",
+    "author": "Valiterm Core",
+    "dateCreated": "2025-08-17",
+    "dateModified": "2025-08-17",
+    "aliases": []
+  },
+  {
+    "slug": "identifier-extended",
+    "name": "identifier (extended)",
+    "description": "Identifier usage extended for variant/SKU disambiguation and consistent linkage within a product family.",
+    "author": "Valiterm Core",
+    "dateCreated": "2025-08-17",
+    "dateModified": "2025-08-17",
+    "aliases": []
+  },
+  {
+    "slug": "is-variant-of-extended",
+    "name": "isVariantOf (extended)",
+    "description": "Extended practice to create a stronger, machine-interpretable link from a variant to its base product or family.",
+    "author": "Valiterm Core",
+    "dateCreated": "2025-08-17",
+    "dateModified": "2025-08-17",
+    "aliases": []
+  },
+  {
+    "slug": "definedtermset-extended",
+    "name": "DefinedTermSet (extended)",
+    "description": "Extended use of DefinedTermSet to publish domain vocabularies (dimensions/standards) with stable references across pages.",
+    "author": "Valiterm Core",
+    "dateCreated": "2025-08-17",
+    "dateModified": "2025-08-17",
+    "aliases": []
+  },
+  {
+    "slug": "categorycode-extended",
+    "name": "CategoryCode (extended)",
+    "description": "Extended CategoryCode/CategoryCodeSet usage to express custom product taxonomies aligned with site navigation and AI interpretation.",
+    "author": "Valiterm Core",
+    "dateCreated": "2025-08-17",
+    "dateModified": "2025-08-17",
+    "aliases": []
+  },
+  {
+    "slug": "main-entity-of-page-extended",
+    "name": "mainEntityOfPage (extended)",
+    "description": "Extended practice to use mainEntityOfPage at category level when the category is the true primary entity for the page.",
+    "author": "Valiterm Core",
+    "dateCreated": "2025-08-17",
+    "dateModified": "2025-08-17",
+    "aliases": []
+  }
+]

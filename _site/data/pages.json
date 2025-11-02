@@ -1,0 +1,42 @@
+[
+  {
+    "group": "Docs",
+    "items": [
+      { "title": "Home", "path": "/" },
+      { "title": "Starter Kit", "path": "/starter-kit.html" },
+      { "title": "HowTo", "path": "/howto/" },
+      { "title": "Policies", "path": "/policy/" }
+    ]
+  },
+  {
+    "group": "Terms",
+    "items": [
+      { "title": "Directory", "path": "/terms/" },
+      { "title": "Core Definition", "path": "/core-definition/" }
+    ]
+  },
+  {
+    "group": "Tools",
+    "items": [
+      { "title": "Generate", "path": "/generate/" },
+      { "title": "Simulate", "path": "/simulate/" },
+      { "title": "Validate", "path": "/validate/" }
+    ]
+  },
+  {
+    "group": "Legacy",
+    "items": [
+      { "title": "BrandEquivalence", "path": "/brand-equivalence/" },
+      { "title": "DefinedTerm", "path": "/defined-term/" },
+      { "title": "PropertyValue", "path": "/property-value/" },
+      { "title": "Industrial Use", "path": "/industrial-compound/" }
+    ]
+  },
+  {
+    "group": "Proof of Concept",
+    "items": [
+      { "title": "Overview", "path": "/proof-of-concept/" },
+      { "title": "Acceptance Log", "path": "/proof-of-concept/acceptance-log/" }
+    ]
+  }
+]

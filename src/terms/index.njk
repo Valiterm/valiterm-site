@@ -1,0 +1,14 @@
+---
+title: Valiterm Core Terms
+permalink: /terms/
+---
+
+<h1>Valiterm Core Terms</h1>
+<ul>
+  {% for t in terms %}
+    <li>
+      <a href="/terms/{{ (t.slug or t.name) | slug }}/">{{ t.name }}</a>
+      {% if t.description %} — <span>{{ t.description }}</span>{% endif %}
+    </li>
+  {% endfor %}
+</ul>

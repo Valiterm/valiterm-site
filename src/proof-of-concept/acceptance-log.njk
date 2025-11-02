@@ -1,0 +1,73 @@
+---
+layout: layouts/legacy.njk
+title: Acceptance Log
+permalink: /proof-of-concept/acceptance-log/
+metaDescription: "Open log of Valiterm’s acceptance levels (crawl, context, authority) with dates and versions."
+---
+
+<nav aria-label="breadcrumb"><a href="/proof-of-concept/">Proof of Concept</a> › Acceptance Log</nav>
+
+<h1>Valiterm Acceptance Log</h1>
+<p>Transparency on how Valiterm moves through the ecosystem. We log versions and acceptance levels with clear dates.</p>
+
+<h2>Legend</h2>
+<ul>
+  <li><strong>Level 1 – Not ignored:</strong> Crawlers follow links and index pages.</li>
+  <li><strong>Level 2 – Context usage:</strong> Definitions are used for interpretation in AI/snippets.</li>
+  <li><strong>Level 3 – Authoritative source:</strong> Valiterm/Montano appears as a cited source in AI answers.</li>
+</ul>
+
+<section id="validation-summary" class="montano-container" aria-label="Validation Summary">
+  <h2>Validation Summary</h2>
+  <p>
+    Valiterm has been tested against multiple AI systems (e.g., Gemini, ChatGPT). All point in the same direction:
+    structured, well-labeled metadata leads to more accurate interpretation of technical tables.
+  </p>
+  <p>
+    Differences between systems are mostly about <strong>timing</strong>, not <strong>direction</strong>.
+    In short, <em>time is the variable</em>.
+  </p>
+  <blockquote>
+    <strong>Where do you want to be next year—optimized for Google 2015, or ready for AI search 2026?</strong>
+  </blockquote>
+  <details>
+    <summary>What we tested</summary>
+    <ul>
+      <li>Parsing of tables with proper <code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;tfoot&gt;</code>, and <code>&lt;th&gt;</code>.</li>
+      <li>Use of defined terms (Valiterm + Schema.org) and cross-page linking for context.</li>
+      <li>Impact on snippet/AI interpretation vs. poorly marked-up tables.</li>
+    </ul>
+  </details>
+</section>
+
+<h2>Timeline</h2>
+<ul>
+  <li>
+    <strong>Valiterm 1.0 launched:</strong>
+    <time datetime="2025-07-15">15 July 2025</time><br>
+    Core definitions published.
+  </li>
+  <li>
+    <strong>Level 1 – Not ignored:</strong>
+    <time datetime="2025-08-18">18 August 2025</time> ✅<br>
+    Google &amp; other crawlers follow links from <em>site.se</em> → <strong>valiterm.org</strong> enters the index.
+  </li>
+  <li>
+    <strong>Valiterm 2.0 launched:</strong>
+    <time datetime="2025-08-24">24 August 2025</time><br>
+    Expanded definitions: CategoryCodeSet, HowTo bundle. Starter kit.
+  </li>
+  <li>
+    <strong>Level 2 – Context usage:</strong> [upcoming]
+  </li>
+  <li>
+    <strong>Valiterm 3.0:</strong> [future]
+  </li>
+  <li>
+    <strong>Level 3 – Authoritative source:</strong> [future]
+  </li>
+</ul>
+
+<hr>
+<p><em>Note:</em> Update dates and add evidence as milestones are reached.
+Proof-of-concept screenshots will be added with Acceptance level 2 – Context usage.</p>
