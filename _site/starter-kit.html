@@ -61,7 +61,7 @@
     <details open>
       <summary><strong>STORE</strong> — visitor address (walk-ins)</summary>
       <pre id="opening-hours-store-json"><code>{
-      "@context": "https://schema.org",
+      "@context": ["https://valiterm.org", "https://schema.org"],
       "@type": ["Organization","LocalBusiness"],
       "@id": "https://example.com/#org",
       "name": "Company Name",
@@ -94,7 +94,7 @@
     <details>
       <summary><strong>SERVICE_AREA</strong> — you go to the customer (no public visitor address)</summary>
       <pre id="opening-hours-service-json"><code>{
-      "@context": "https://schema.org",
+      "@context": ["https://valiterm.org", "https://schema.org"],
       "@type": ["Organization","LocalBusiness"],
       "@id": "https://example.com/#org",
       "name": "Company Name",
@@ -127,7 +127,7 @@
     <details>
       <summary><strong>ONLINE_ONLY</strong> — no public visitor address (consulting/SaaS)</summary>
       <pre id="opening-hours-online-json"><code>{
-      "@context": "https://schema.org",
+      "@context": ["https://valiterm.org", "https://schema.org"],
       "@type": "Organization",
       "@id": "https://example.com/#org",
       "name": "Company Name",
@@ -153,7 +153,7 @@
     <!-- Daily scheduling cut-off for appointments (based on booking confirmation) -->
     <script type="application/valiterm+json" id="service-cutoff-json">
     {
-      "@context":"https://valiterm.org",
+      "@context": ["https://valiterm.org", "https://schema.org"],
       "@type":"OrderCutoffPolicy",
       "@id":"#service-cutoff",
       "cutoffTime":"15:00",
@@ -366,7 +366,7 @@ INPUTS
 - OPTIONAL_PROFILE_BULKY_ID: [#profile-bulky or #profile-bulky-dk]
 
 RULES
-1) Keep "@context":"https://valiterm.org", "@type":"ShippingIndex", "@id".
+1) Keep "@context": ["https://valiterm.org", "https://schema.org"], "@type":"ShippingIndex", "@id".
 2) Update "matrices" and "links" to the final IDs above.
 3) OUTPUT: return ONE JSON object (the adapted ShippingIndex).</code></pre>
 
@@ -445,7 +445,7 @@ RULES
     <!-- ShippingProfile with multiple lanes -->
     <script type="application/valiterm+json" id="shipping-profile-bulky-dk-json">
     {
-      "@context":"https://valiterm.org",
+      "@context": ["https://valiterm.org", "https://schema.org"],
       "@type":"ShippingProfile",
       "@id":"#profile-bulky-dk",
       "lanes":[
@@ -491,7 +491,7 @@ RULES
     <!-- LaneSelection: prefer specific regions first -->
     <script type="application/valiterm+json" id="lane-selection-bulky-dk-json">
     {
-      "@context":"https://valiterm.org",
+      ""@context": ["https://valiterm.org", "https://schema.org"],
       "@type":"LaneSelection",
       "@id":"#lane-selection-bulky-dk",
       "forService":{
@@ -509,7 +509,7 @@ RULES
   <h2 id="cutoff">Cut-off & Readiness</h2>
     <script type="application/valiterm+json" id="policy-cutoff-json">
     {
-      "@context":"https://valiterm.org",
+      "@context": ["https://valiterm.org", "https://schema.org"],
       "@type":"OrderCutoffPolicy",
       "@id":"#policy-cutoff",
       "cutoffTime":"12:00",
@@ -520,7 +520,7 @@ RULES
     </script>
     <script type="application/valiterm+json" id="business-profile-json">
   {
-    "@context":"https://valiterm.org",
+    "@context": ["https://valiterm.org", "https://schema.org"],
     "@type":"BusinessProfile",
     "@id":"#business-profile",
 
@@ -537,7 +537,7 @@ RULES
     <!-- Only include this if you don't already have a ClosurePolicy on the page -->
     <script type="application/valiterm+json" id="closure-policy-json">
     {
-      "@context": "https://valiterm.org",
+      "@context": ["https://valiterm.org", "https://schema.org"],
       "@type": "ClosurePolicy",
       "@id": "#closure-policy",
       "hoursRef": "https://example.com/#org",
@@ -564,7 +564,7 @@ RULES
   <h2 id="shipping-matrix">ShippingMatrix (base)</h2>
   <script type="application/valiterm+json" id="shipping-matrix-json">
   {
-    "@context":"https://valiterm.org",
+    "@context": ["https://valiterm.org", "https://schema.org"],
     "@type":"ShippingMatrix",
     "@id":"#shipping-matrix",
     "version":"1.0",
@@ -596,7 +596,7 @@ RULES
   <h2 id="lane-selection">LaneSelection (geo)</h2>
     <script type="application/valiterm+json" id="lane-selection-json">
     {
-      "@context":"https://valiterm.org",
+      "@context": ["https://valiterm.org", "https://schema.org"],
       "@type":"LaneSelection",
       "@id":"#lane-selection",
       "forService":{
@@ -614,7 +614,7 @@ RULES
   <h2 id="shipping-index">ShippingIndex</h2>
     <script type="application/valiterm+json" id="shipping-index-json">
     {
-      "@context": "https://valiterm.org",
+      "@context": ["https://valiterm.org", "https://schema.org"],
       "@type": "ShippingIndex",
       "@id": "#shipping-index",
       "updated": "2025-08-23",

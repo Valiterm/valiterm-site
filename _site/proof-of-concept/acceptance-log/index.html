@@ -61,13 +61,39 @@
 <nav aria-label="breadcrumb"><a href="/proof-of-concept/">Proof of Concept</a> › Acceptance Log</nav>
 
 <h1>Valiterm Acceptance Log</h1>
+<section id="validation-highlight" class="montano-container" aria-label="Latest Validation">
+  <h2>Latest Validation: Schema & AI Recognition</h2>
+  <p>
+    As of <time datetime="2025-11-02">2 November 2025</time>, the 
+    <strong>Schema.org Structured Data Validator</strong> accepts 
+    <code>itemtype="https://valiterm.org/Product"</code> and related Valiterm types 
+    without errors or warnings, confirming full syntactic compatibility.
+  </p>
+  <p>
+    Google’s new <strong>Search AI (Gemini-based)</strong> also reads and interprets 
+    Valiterm markup correctly — including the <code>data-becon</code> microformat 
+    and attributes such as <code>appliesTo="allOffers"</code>.
+  </p>
+  <p>
+    Meanwhile, legacy validation systems such as the 
+    <strong>Rich Results Test</strong> and <strong>Merchant Center</strong> 
+    report “no structured data detected”, confirming that Valiterm markup does not 
+    interfere with advertising eligibility or schema conflicts.
+  </p>
+  <p>
+    Based on consistent interpretation in Search AI, it is <em>assumed</em> that 
+    Google Ads AI also parses Valiterm semantics.  
+    This assumption is currently being tested — the hypothesis is not yet verified.
+  </p>
+</section>
+
 <p>Transparency on how Valiterm moves through the ecosystem. We log versions and acceptance levels with clear dates.</p>
 
 <h2>Legend</h2>
 <ul>
   <li><strong>Level 1 – Not ignored:</strong> Crawlers follow links and index pages.</li>
   <li><strong>Level 2 – Context usage:</strong> Definitions are used for interpretation in AI/snippets.</li>
-  <li><strong>Level 3 – Authoritative source:</strong> Valiterm/Montano appears as a cited source in AI answers.</li>
+  <li><strong>Level 3 – Authoritative source:</strong> Valiterm appears as a cited source in AI answers.</li>
 </ul>
 
 <section id="validation-summary" class="montano-container" aria-label="Validation Summary">
@@ -111,7 +137,11 @@
     Expanded definitions: CategoryCodeSet, HowTo bundle. Starter kit.
   </li>
   <li>
-    <strong>Level 2 – Context usage:</strong> [upcoming]
+    <strong>Level 2 – Context usage:</strong>
+    <time datetime="2025-11-02">2 November 2025</time> ⏳  
+    Schema.org validation ✓ | Google Search AI (Gemini) reads Valiterm correctly.  
+    Merchant Center = no conflict.  
+    Ads AI testing in progress.
   </li>
   <li>
     <strong>Valiterm 3.0:</strong> [future]

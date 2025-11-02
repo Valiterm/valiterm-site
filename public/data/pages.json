@@ -23,15 +23,15 @@
       { "title": "Validate", "path": "/validate/" }
     ]
   },
-  {
-    "group": "Legacy",
-    "items": [
-      { "title": "BrandEquivalence", "path": "/brand-equivalence/" },
-      { "title": "DefinedTerm", "path": "/defined-term/" },
-      { "title": "PropertyValue", "path": "/property-value/" },
-      { "title": "Industrial Use", "path": "/industrial-compound/" }
-    ]
-  },
+ {
+  "group": "Schema",
+  "items": [
+    { "title": "Defined Term", "path": "/defined-term/" },
+    { "title": "Property Value", "path": "/property-value/" },
+    { "title": "Core Definition", "path": "/core-definition/" },
+    { "title": "Brand Equivalence", "path":"/industrial-compound/" }
+  ]
+},
   {
     "group": "Proof of Concept",
     "items": [
