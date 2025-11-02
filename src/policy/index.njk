@@ -29,7 +29,7 @@ permalink: /policy/
 <h2 id="publishing">Publishing practice</h2>
 <ul>
   <li>Prefer path-only links on your own domain during testing (<code>/terms/</code>), switch to absolute when stable.</li>
-  <li>Hidden blocks are acceptable (HTML comments) for valiterm JSON; schema.org JSON-LD should be published in <code>&lt;script type="application/ld+json"&gt;</code>.</li>
+  <li>For valiterm JSON; schema.org JSON-LD should be published in <code>&lt;script type="application/valiterm+json"&gt;</code>.With "@context": ["https://valiterm.org", "https://schema.org"]</li>
   <li>IDs must not depend on build hashes or session tokens.</li>
 </ul>
 

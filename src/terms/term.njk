@@ -10,7 +10,7 @@ eleventyComputed:
   canonical: "https://valiterm.org/terms/{{ (term.slug or term.name) | slug }}"
   jsonld: |
     {
-      "@context": "https://schema.org",
+      "@context": ["https://valiterm.org", "https://schema.org"],
       "@type": "DefinedTerm",
       "@id": "https://valiterm.org/terms/{{ (term.slug or term.name) | slug }}",
       "name": "{{ term.name }}",
