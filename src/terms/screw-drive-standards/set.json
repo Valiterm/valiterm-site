@@ -1,0 +1,70 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://valiterm.org/terms/screw-drive-standards",
+  "name": "Screw Drive Standards",
+  "name-sv": "Standards för skruvspår",
+  "name-pt": "Padrões de encaixe para parafusos",
+  "description": "Shared terminology for technical screw drive systems used in tools and fasteners. Defines the Torx family and related variants.",
+  "description-sv": "Gemensam terminologi för tekniska skruvspår. Beskriver Torx och närliggande varianter, med fokus på driftssäkerhet och korrekt verktygsval.",
+  "description-pt": "Terminologia padronizada para sistemas de encaixe de parafusos. Define a família Torx e variantes relacionadas, com foco em segurança e precisão.",
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/screw-drive-standards/torx",
+      "name": "Torx",
+      "name-sv": "Torx",
+      "name-pt": "Torx",
+      "identifier": "ISO 10664",
+      "description": "Hexalobular internal drive system providing improved torque transfer and reduced cam-out compared to Phillips or Pozidriv.",
+      "description-sv": "Hexalobulärt inre skruvspår som ger god kraftöverföring och låg risk för slirning jämfört med Phillips eller Pozidriv.",
+      "description-pt": "Encaixe interno hexalobular que oferece boa transferência de torque e menor risco de desgaste em comparação com Phillips ou Pozidriv."
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/screw-drive-standards/torx-security",
+      "name": "Security Torx (TR)",
+      "name-sv": "Säkerhetstorx (TR)",
+      "name-pt": "Torx de Segurança (TR)",
+      "isVariantOf": "https://valiterm.org/terms/screw-drive-standards/torx",
+      "description": "Torx variant featuring a center pin in the recess. Requires matching TR tools. TR tools fit standard Torx, but standard tools do not fit TR.",
+      "description-sv": "Torx-variant med centrumstift i spåret. Kräver TR-verktyg. TR-verktyg passar även vanlig Torx, men vanliga Torx-bits passar inte TR.",
+      "description-pt": "Variante Torx com pino central. Requer ferramentas TR. Ferramentas TR servem em Torx padrão; o contrário não é possível."
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/screw-drive-standards/torx-plus",
+      "name": "Torx Plus (IP)",
+      "name-sv": "Torx Plus (IP)",
+      "name-pt": "Torx Plus (IP)",
+      "isVariantOf": "https://valiterm.org/terms/screw-drive-standards/torx",
+      "description": "Modified lobe shape offering greater surface engagement and improved torque capability. Not automatically interchangeable with standard Torx.",
+      "description-sv": "Modifierad lobbform med större anliggningsyta och högre momentkapacitet. Inte alltid kompatibel med standard Torx.",
+      "description-pt": "Formato modificado para maior área de contato e capacidade de torque. Nem sempre compatível com Torx padrão."
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/screw-drive-standards/external-torx",
+      "name": "External Torx (E-Torx)",
+      "name-sv": "Extern Torx (E-Torx)",
+      "name-pt": "Torx Externo (E-Torx)",
+      "isVariantOf": "https://valiterm.org/terms/screw-drive-standards/torx",
+      "description": "External hexalobular head driven by female sockets. Used for bolts where the head itself forms the drive profile.",
+      "description-sv": "Extern hexalobulär skruvskalle som drivs med hylsor. Används där skruvskallen själv utgör drivprofilen.",
+      "description-pt": "Cabeça externa hexalobular acionada por soquetes. Utilizada quando a cabeça do parafuso é o próprio encaixe."
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/screw-drive-standards/micro-torx",
+      "name": "Micro Torx",
+      "name-sv": "Micro Torx",
+      "name-pt": "Torx Micro",
+      "isVariantOf": "https://valiterm.org/terms/screw-drive-standards/torx",
+      "description": "Small-size Torx profiles used in electronics and precision assemblies.",
+      "description-sv": "Små Torx-storlekar för elektronik och finmekanik.",
+      "description-pt": "Tamanhos pequenos de Torx usados em eletrônica e montagem de precisão."
+    }
+  ],
+  "version": "1.0.0",
+  "dateModified": "2025-11-08"
+}

@@ -1,0 +1,52 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://valiterm.org/terms/driver-type",
+  "name": "Driver Type Classification",
+  "name-sv": "Drivtypsklassificering",
+  "name-pt": "Classificação de tipos de acionamento",
+  "description": "Classification of driver mechanisms used to apply torque in screw fastening, distinguishing between manual, continuous mechanical, impact-based, and axial hammer drivers.",
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/driver-type/manual",
+      "identifier": "DT1",
+      "name": "Manual Driver",
+      "name-sv": "Manuell skruvmejsel",
+      "name-pt": "Chave manual",
+      "description": "Applies torque by hand without powered assistance, typically used where control and precision are required.",
+      "isVariantOf": "https://valiterm.org/terms/driver-type"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/driver-type/mechanical",
+      "identifier": "DT2",
+      "name": "Mechanical Driver",
+      "name-sv": "Maskindriven skruvdragare",
+      "name-pt": "Parafusadeira",
+      "description": "Delivers continuous rotational torque via electric or pneumatic motor, suitable for general fastening.",
+      "isVariantOf": "https://valiterm.org/terms/driver-type"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/driver-type/impact",
+      "identifier": "DT3",
+      "name": "Impact Driver",
+      "name-sv": "Slagskruvdragare",
+      "name-pt": "Parafusadeira de impacto",
+      "description": "Applies torque through repeated internal hammer impacts, used for driving into denser or resistant material.",
+      "isVariantOf": "https://valiterm.org/terms/driver-type",
+      "valueReference": "https://valiterm.org/terms/tool-impact-class"
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/driver-type/rotary-hammer",
+      "identifier": "DT4",
+      "name": "Rotary Hammer / Hammer Drill",
+      "name-sv": "Slagborr / Borrhammare",
+      "name-pt": "Martelete rompedor",
+      "description": "Applies axial hammering force while rotating, used primarily for drilling concrete, masonry, and stone.",
+      "isVariantOf": "https://valiterm.org/terms/driver-type"
+    }
+  ]
+}

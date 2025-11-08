@@ -12,9 +12,31 @@
     "group": "Terms",
     "items": [
       { "title": "Directory", "path": "/terms/" },
-      { "title": "Core Definition", "path": "/core-definition/" }
+      { "title": "Core Definition", "path": "/core-definition/" },
+      { "title": "Screw Drive Standards", "path": "/terms/screw-drive-standards/" },
+      { "title": "Tool Impact Class", "path": "/terms/tool-impact-class/" },
+      { "title": "Driver Type", "path": "/terms/driver-type/" }
+
     ]
   },
+  {
+    "group": "Schema",
+    "items": [
+      { "title": "Defined Term", "path": "/defined-term/" },
+      { "title": "Property Value", "path": "/property-value/" },
+      { "title": "Core Definition", "path": "/core-definition/" },
+      { "title": "Brand Equivalence", "path": "/industrial-compound/" },
+      { "title": "Product", "path": "/product" }
+    ]
+  },
+
+  {
+    "group": "Properties",
+    "items": [
+      { "title": "appliesTo", "path": "/property/appliesTo" }
+    ]
+  },
+
   {
     "group": "Tools",
     "items": [
@@ -23,15 +45,6 @@
       { "title": "Validate", "path": "/validate/" }
     ]
   },
- {
-  "group": "Schema",
-  "items": [
-    { "title": "Defined Term", "path": "/defined-term/" },
-    { "title": "Property Value", "path": "/property-value/" },
-    { "title": "Core Definition", "path": "/core-definition/" },
-    { "title": "Brand Equivalence", "path":"/industrial-compound/" }
-  ]
-},
   {
     "group": "Proof of Concept",
     "items": [

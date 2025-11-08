@@ -1,0 +1,55 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "https://valiterm.org/terms/tool-impact-class",
+  "name": "Tool Impact Class",
+  "name-sv": "Slagklass för verktygsbits",
+  "name-pt": "Classe de impacto para bits",
+  "description": "Classification of screwdriver bits and drivers according to their ability to withstand impacting torque.",
+  "description-sv": "Klassificering av bits och verktyg baserat på deras förmåga att tåla slående moment.",
+  "description-pt": "Classificação de bits e ferramentas de acordo com sua capacidade de suportar torque de impacto.",
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/tool-impact-class/none",
+      "name": "Non-Impact Rated",
+      "name-sv": "Ej slagklassad",
+      "name-pt": "Não para impacto",
+      "description": "Designed for rotational torque only. Should not be used with impact drivers.",
+      "description-sv": "Avsedd för roterande moment utan slag. Ska inte användas med slagverktyg.",
+      "description-pt": "Projetado apenas para torque rotativo. Não deve ser usado com ferramentas de impacto."
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/tool-impact-class/light",
+      "name": "Light Impact",
+      "name-sv": "Lätt slagklass",
+      "name-pt": "Impacto leve",
+      "description": "Capable of handling low-intensity impacting torque. Suitable for intermittent impact use.",
+      "description-sv": "Tål lägre slående moment. Lämplig för sporadisk användning av slag.",
+      "description-pt": "Suporta impacto de baixa intensidade. Adequado para uso intermitente."
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/tool-impact-class/impact",
+      "name": "Impact Rated",
+      "name-sv": "Slagklassad",
+      "name-pt": "Classificada para impacto",
+      "description": "Designed for continuous impacting torque. Suitable for power impact drivers.",
+      "description-sv": "Utformad för kontinuerligt slående moment. Avsedd för slående skruvdragare.",
+      "description-pt": "Projetada para impacto contínuo. Adequada para parafusadeiras de impacto."
+    },
+    {
+      "@type": "DefinedTerm",
+      "@id": "https://valiterm.org/terms/tool-impact-class/torsion",
+      "name": "Torsion Zone Impact",
+      "name-sv": "Slag + torsionszon",
+      "name-pt": "Impacto com zona torsional",
+      "description": "Features a flexible torsion zone to absorb shock load while maintaining bit integrity.",
+      "description-sv": "Har en flexibel torsionszon för att absorbera slag och minska risk för brott.",
+      "description-pt": "Possui uma zona torsional flexível para absorver impacto e reduzir risco de quebra."
+    }
+  ],
+  "version": "1.0.0",
+  "dateModified": "2025-11-08"
+}
