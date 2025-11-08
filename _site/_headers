@@ -1,9 +1,0 @@
-/data/pages.json
-  Cache-Control: no-store
-
-/assets/*
-Cache-Control: public, max-age=31536000, immutable
-
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
-
